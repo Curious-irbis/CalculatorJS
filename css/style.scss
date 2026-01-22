@@ -1,0 +1,97 @@
+:root{
+    --size-windowH: 685px;
+    --size-windowW: 500px;
+
+    --size-cell: 200px;
+}
+
+body{
+    .calculator_window{
+        background-color: rgb(213, 184, 147);
+        width: var(--size-windowW);
+        height: var(--size-windowH);
+
+        border: 7px solid rgb(111, 77, 56) ;
+
+        .header_calculator{
+            background-color: rgb(37, 52, 79);
+            border: 3px solid rgb(97, 120, 145);
+            height: 100px;
+
+            color: rgb(127, 158, 191);
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .control_buttons{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            button{
+                background-color: rgb(213, 184, 147);
+                color: rgb(37, 52, 79);
+                // border: 3px solid rgb(111, 77, 56);
+                border: none;
+                font-size: 26px;
+                padding: 10px 0;
+            }
+
+            button:hover{
+                cursor: pointer;
+            }
+
+            button:active{
+                background-color: rgb(171, 132, 81);
+                color: whitesmoke;
+            }
+        }
+
+        .body_buttons{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+
+            .bodyCellBtn{
+                width: calc(var(--size-cell)*1.25);
+                height: calc(var(--size-cell) - var(--size-cell)*0.6);
+
+                color: thistle;
+                background-color: beige;
+                
+                // border: 1px solid;
+                border: none;
+
+                font-size: 32px;
+                // text    
+            }
+
+            .bodyCellBtn:active{
+                color: lavender;
+                background-color: indianred;
+            }
+        }
+
+        .calcBtns{
+            display: flex;
+            flex-flow: wrap row;
+
+            button{
+                width: 250px;
+                height: 50px;
+
+                font-size: 28px;
+
+                color: rgb(37, 52, 79);
+                background-color: rgb(213, 184, 147);
+
+                border: none;
+            }
+
+            button:active{
+                background-color: rgb(171, 132, 81);
+                color: whitesmoke;
+            }
+        }
+    }
+}
